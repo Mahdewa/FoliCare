@@ -128,7 +128,7 @@ const ScannerPage = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/predict', formData, {
+      const response = await axios.post('https://mahdewa-grape-leaf-disease-classify.hf.space/predict', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setTimeout(() => { setResult(response.data); setLoading(false); }, 1500);
